@@ -1,11 +1,16 @@
+import {Route, Routes} from "react-router-dom";
+import Layout from "./components/Layout";
+import HomePage from "./pages/HomePage";
 
 
 function App() {
-
   return (
-    <div>
-      <button className="btn btn-primary">Button</button>
-    </div>
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<HomePage />}/>
+    </Route>
+
+  </Routes>
   )
 }
 
