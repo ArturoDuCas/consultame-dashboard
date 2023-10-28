@@ -20,7 +20,16 @@ export default function Header() {
   return (
     <div className="navbar bg-base-300 rounded-box">
       <div className="flex-1 px-2 lg:flex-none">
-        <Link to="/" className="text-2xl font-bold">consultame</Link>
+        <Link to="" className="flex items-center">
+          <div className="avatar mr-2">
+            <div className="w-10 mask mask-squircle">
+              <img src="/logo.png" />
+            </div>
+          </div>
+          <span className="text-2xl font-bold">
+            consultame
+          </span>
+        </Link>
       </div>
       <div className="flex justify-end flex-1 px-2">
         <div className="flex items-stretch">
