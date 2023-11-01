@@ -21,11 +21,13 @@ To get started with the Consuldame Dashboard, follow these steps:
    Install project dependencies:
 
 2. Run this on the terminal
-npm install
-Configure the Consuldame API endpoint in the code to match your API's URL.
+      ```bash
+   npm install
+   Configure the Consuldame API endpoint in the code to match your API's URL.
 
-3. Start the development server:
-npm run dev
+4. Start the development server:
+   ```bash
+   npm run dev
 Open your web browser and access the dashboard at http://localhost:3000 (or the specified URL).
 
 
