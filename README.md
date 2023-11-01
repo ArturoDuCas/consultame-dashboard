@@ -1,6 +1,6 @@
 # README Consultame Dashboard
 
-The Consuldame Dashboard is a web dashboard built with React and Vite, utilizing the Tailwind CSS framework and DaisyUI for a modern and responsive design. This dashboard is designed to work in conjunction with the Consuldame API, which is hosted in a separate repository, to provide a comprehensive monitoring and visualization solution for data collected from an application.
+The Consuldame Dashboard is a web dashboard built with React and Vite, utilizing the Tailwind CSS framework and DaisyUI for a modern and responsive design. This dashboard is designed to work in conjunction with the Consuldame API, which is hosted in a separate repository, to provide a comprehensive monitoring and visualization solution for data collected from the swiftUI application "Consultame".
 
 ## Features
 
@@ -18,8 +18,8 @@ To get started with the Consuldame Dashboard, follow these steps:
    ```bash
    git clone https://github.com/your-username/Consuldame-Dashboard.git
    cd Consuldame-Dashboard
-   Install project dependencies:
-
+   
+Install project dependencies:
 2. Run this on the terminal
       ```bash
    npm install
