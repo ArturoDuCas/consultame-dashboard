@@ -23,7 +23,8 @@ To get started with the Consuldame Dashboard, follow these steps:
 2. Run this on the terminal
       ```bash
    npm install
-   Configure the Consuldame API endpoint in the code to match your API's URL.
+
+Configure the Consuldame API endpoint in the code to match your API's URL.
 
 4. Start the development server:
    ```bash
