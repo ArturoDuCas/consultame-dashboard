@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import { FaHospitalAlt } from "react-icons/fa";
+import { COLORS} from "../config/themesConfig.js";
 
 export default function HospitalsData({data}) {
   const [totalVisits, setTotalVisits] = useState(0);
@@ -25,7 +26,10 @@ export default function HospitalsData({data}) {
         <div key={index} className="flex justify-between mb-4 items-center px-2">
           <div className="flex gap-3 items-center w-3/4">
             <div className="avatar placeholder">
-              <div className="bg-primary text-neutral-content rounded-full w-8">
+              <div
+                className="bg-primary text-neutral-content rounded-full w-8"
+                style={{ backgroundColor: COLORS[index % COLORS.length] }}
+              >
                 <FaHospitalAlt />
               </div>
             </div>

@@ -1,4 +1,5 @@
-import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, Legend, ResponsiveContainer} from 'recharts';
+import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, Legend, ResponsiveContainer, Cell} from 'recharts';
+import {COLORS} from "../config/themesConfig.js";
 export default function ContactsChart({ data }) {
 
 
@@ -11,7 +12,13 @@ export default function ContactsChart({ data }) {
             <XAxis dataKey="type" />
             <YAxis t />
             <Tooltip />
-            <Bar dataKey="occurrences" fill="#6419E6" />
+            <Bar dataKey="occurrences" fill="#6419E6">
+              {
+                data.map((entry, index) => (
+                  <Cell key={`contacts-cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))
+              }
+            </Bar>
           </BarChart>
         </ResponsiveContainer>
       </div>

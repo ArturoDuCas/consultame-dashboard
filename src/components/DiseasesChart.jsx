@@ -1,10 +1,9 @@
 import {useState} from "react";
-import {FaDisease} from "react-icons/fa";
-import {Pie, PieChart, Tooltip, ResponsiveContainer} from "recharts";
+import {Pie, PieChart, Tooltip, ResponsiveContainer, Cell} from "recharts";
+import { COLORS } from "../config/themesConfig.js";
 
 export default  function DiseasesChart ({ data })  {
   const [activeKey, setActiveKey] = useState(0);
-
 
   let keys = data ? Object.keys(data) : null;
   let displayData = data ? data[keys[activeKey]] : null;
@@ -34,10 +33,15 @@ export default  function DiseasesChart ({ data })  {
             cx="50%"
             cy="50%"
             outerRadius={100}
-            fill="#6419E6"
             label={(entry) => entry.name}
-          />
+          >
+          {
+            displayData.map((entry, index) => (
+              <Cell key={`disease-cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))
+          }
           <Tooltip />
+          </Pie>
         </PieChart>
       </ResponsiveContainer>
 

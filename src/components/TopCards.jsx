@@ -54,7 +54,8 @@ export default function TopCards({ totalUsersData, consultationData, sexData }) 
         detailsOnHover={consultationHoverDetails}
       />
 
-      <SexDataCard data={sexData} />
+      <SexDataCard data={sexData}
+      />
 
       <NumericDataCard
         title="Usuarios Activos"

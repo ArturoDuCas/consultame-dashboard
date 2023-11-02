@@ -1,4 +1,5 @@
-import {Pie, PieChart, ResponsiveContainer, Tooltip} from "recharts";
+import {Cell, Pie, PieChart, ResponsiveContainer, Tooltip} from "recharts";
+import { COLORS } from "../config/themesConfig.js";
 
 export default  function BadHabitsChart ({ data })  {
 
@@ -17,8 +18,14 @@ export default  function BadHabitsChart ({ data })  {
             outerRadius={80}
             fill="#6419E6"
             label={(entry) => entry.name}
-          />
+          >
           <Tooltip />
+            {
+              data.map((entry, index) => (
+                <Cell key={`habits-cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              ))
+            }
+          </Pie>
         </PieChart>
       </ResponsiveContainer>
 

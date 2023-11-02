@@ -66,7 +66,7 @@ export default function HomePage() {
         <>
           <TopCards totalUsersData={totalUsersData} consultationData={consultationData} sexData={sexData}/>
           <div className="flex gap-2 mb-2">
-            <DiseasesChart data={diseasesData} />
+            <DiseasesChart key={Date.now() + "1"} data={diseasesData} />
             <HospitalsData data={hospitalData} />
           </div>
           <div className="flex gap-2">
